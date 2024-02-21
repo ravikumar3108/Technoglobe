@@ -1,11 +1,22 @@
-console.log("heloo")
+
 const express = require('express')
-app = express() 
-app.listen(5000,(req,res)=>{
-    console.log("Crete a server")
-})
-// Api 
+
+// 
+const app = express()
+
+// make a server 
+
 app.get("",(req,res)=>{
-    res.send("Send A Response")
+    res.send("hleo priyanshuffewrewrewrewrewrewr")
 })
+console.log("hii")
+app.listen(5000,()=>{
+    console.log("server crtera")
+})
+
+
+
+
+
+
 
