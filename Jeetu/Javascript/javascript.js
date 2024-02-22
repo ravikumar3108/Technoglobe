@@ -69,15 +69,15 @@ console.log(y)
 }
 
 // 2. Var 
-//  A. let can be re-declared 
+//  A. var can be re-declared 
 //  re-Assign
-// B.let cannot be a block scope 
+// B. var cannot be a block scope 
 
 
 // 3. const 
-//  A. let cannot be re-declared 
-//  B . caanot br re-Assign
-// C.let can be a block scope 
+//  A. const cannot be re-declared 
+//  B . canot br re-Assign
+// C. const can be a block scope 
 
 
 //  
