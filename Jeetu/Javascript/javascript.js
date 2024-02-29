@@ -78,8 +78,6 @@ console.log(y)
 //  A. const cannot be re-declared 
 //  B . canot br re-Assign
 // C. const can be a block scope 
-
-
 //  
 
 
