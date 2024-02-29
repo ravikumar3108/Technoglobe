@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        /* 
+        Boxmodel 
+        content 
+        border 
+        padding  = space btw our border and content 
+        margin = space btw border and outer element
+        */
+
+        .cl h1{
+            /* border: 1px solid green; */
+            border-width: 4px;
+            border-style: dotted;
+            border-color: red;
+            padding: 100px; /* all side */
+            padding: 10px 20px; /* 10px = T & B ; 20px = L & R  */
+            padding: 20px 30px 40px; /* 20px = T; 30px = L & R ; 40px = B */
+            padding: 10px 20px 30px 40px; /*clockwise from top*/
+            padding-left: 200px;
+            margin-left: 200px;
+            text-align: center;
+        }
+        .cl1{
+            margin-top: 200px;
+        }
+        .cl2{
+            margin-top: 100px;
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+    <div class="cl">
+        <h1>heloo</h1>
+    </div>
+    <div class="cl cl1">
+        <h1>heloo</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi unde veniam ut ex voluptatibus consequatur fuga, corporis maxime molestiae itaque ducimus earum ad. Cupiditate voluptatem saepe fugit amet numquam quis.</p>
+        <h1>hfhda</h1>
+    </div>
+    <div class="cl cl2">
+        <h1>heloo</h1>
+    </div>
+
+
+
+</body>
+</html>

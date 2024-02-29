@@ -65,6 +65,62 @@ let d = num1 += 10
 console.log("value of d", d)
 console.log("value of num1", num1)
 
+// Comparision operator == works on bollean values 
+
+// == equal value 
+//  === equal value and type 
+// != 
+//  !==
+//  <  
+//  > 
+//  <=
+//  >= 
+
+// let n1 = 10
+// let n2 = 30
+// let n3 = "30"
+// let n4 = "10"
+
+// // 
+// let dp = n1 == n4
+// let dp1 = n1 === n4
+// console.log(dp)
+// console.log(dp1)
+
+// logical operators 
+ 
+//  ||  or 
+//  &&  and 
+//  !   not 
+
+// and  
+// true && true = true
+// true && false = false
+// false && true = false
+// false && false = false
+
+// or  
+// true && true = true
+// true && false = true
+// false && true = true
+// false && false = false
+
+
+
+let n1 = 10
+let n2 = 30
+let n3 = "30"
+let n4 = "10"
+
+// 
+let dp = (n1 == n4) && (n2 != n3) ||  !(n4 < n2) 
+// let dp1 = n1 === n4
+console.log(dp)
+// console.log(dp1)
+
+
+
+
 
 
 
