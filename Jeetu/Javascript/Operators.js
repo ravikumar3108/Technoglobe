@@ -118,6 +118,70 @@ let dp = (n1 == n4) && (n2 != n3) ||  !(n4 < n2)
 console.log(dp)
 // console.log(dp1)
 
+//  if , else statment :- it is a statement which is run when our condition is true 
+
+//  synatax of our statement
+// if(condition){
+    // code 
+// }
+
+//  default condition 
+// else{
+//     // code 
+// }
+
+//  multiple condiion 
+
+// else if (condition){
+    //  code 
+// }
+
+
+
+let x = 20
+
+if (x == 10){
+    document.write("x is equal to 10")
+}
+
+else if(x == 20){
+    document.write("x is not equal to 10","<br>")
+}
+
+else if(x != 20){
+    document.write("x is not equal to 10")
+}
+
+else{
+    document.write("defalt consition </br>")
+}
+
+
+// Switch Statement :- 
+
+// 
+let g = 2
+
+switch (g){
+    case 1 :
+         console.log("case1 ","")
+         break;
+    case 2 :
+         console.log("case2")
+         break;
+    case 3 :
+         console.log("case3")
+         break;
+    case 4 :
+         console.log("case4")
+         break;
+   default :
+        console.log("default")
+}
+let x3 = 10
+document.write(x3)
+
+
 
 
 
