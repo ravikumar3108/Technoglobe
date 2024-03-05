@@ -56,3 +56,16 @@ import css in node js:-
 	2. create .css file  
 	3. link css file in html 
 	4. <link rel="stylesheet" href="/css/style.css"/>  
+
+
+—-------------------------------------------------------------------------------
+Node js modules:-
+	Node.js has a set of modules which you can use without any further installation.
+File system modules (fs) :-
+	For read .text file :-
+
+
+utf-8 === If the encoding option is specified then this function returns a string. Otherwise it returns a buffer.
+
+buffer:-
+The buffers module provides a binary data.
