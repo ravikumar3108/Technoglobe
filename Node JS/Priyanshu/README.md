@@ -69,3 +69,10 @@ utf-8 === If the encoding option is specified then this function returns a strin
 
 buffer:-
 The buffers module provides a binary data.
+
+
+Body parser:-      form data send in server(node js).
+
+Install body parser.     ( npm i body-parser )
+Open server.js
+
