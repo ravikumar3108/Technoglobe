@@ -3,7 +3,7 @@
 // Array works on index number 
 
 
-let arr = [1,2,45,7,4]
+let arr = [1, 2, 45, 7, 4]
 
 // length 
 console.log(arr.length)
@@ -38,11 +38,11 @@ console.log(arr)
 // 2. remove items
 // 3. Add values 
 
-let spl  = arr.splice(1,0,10,4,5,6)
+let spl = arr.splice(1, 0, 10, 4, 5, 6)
 console.log(arr)
 
 // slice method = give a new array 
-let sl  = arr.slice(2,6)
+let sl = arr.slice(2, 6)
 console.log(sl)
 
 // delete 
@@ -53,14 +53,38 @@ console.log(arr)
 
 //  Concat :- Combine multiples array 
 
-let arr2 = ["somendar","jettu"]
-let arr3 = ["dhruv","priyanshu","dev"]
+let arr2 = ["somendar", "jettu"]
+let arr3 = ["dhruv", "priyanshu", "dev"]
 
-let con = arr2.concat(arr3,arr)
+let con = arr2.concat(arr3, arr)
 console.log(con)
 
 
-// Sort :- 
-//  Reverse :- 
+// Sort :-
+// Reverse :-
+
+//  sting :- String are used to store Our character values
+//  string works on index number 
+// string also countable the white spaces 
+
+//  String methods :-
+
+let str = "                                    hii my name is ravi. ravi "
+//  Aceesss our string []
+// length
+//  replace() => 2 parameters = first Exist in your sting  , second = replace by second value 
+//  replaceAll()
+// toUpperCase()
+// toLowerCase()
+// concat() 
+// slice() 
+// trim()
+// trimStart()
+// trimEnd()
+// charAt()
+
+
+
+
 
 
