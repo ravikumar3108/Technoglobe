@@ -88,82 +88,113 @@ let str = "                                    hii my name is ravi. ravi "
 // Function are re-usable 
 
 //  create a function 
-function Fun1() {
-    console.log("function is call ")
-}
+// function Fun1() {
+//     console.log("function is call ")
+// }
 
-//  call the function = by the name 
-Fun1()
+// //  call the function = by the name 
+// Fun1()
 
-function Fun2() {
-    a = 60
-    b = 50
-    c = a + b
-    console.log(c)
-}
+// function Fun2() {
+//     a = 60
+//     b = 50
+//     c = a + b
+//     console.log(c)
+// }
 
-Fun2()
-Fun2()
-Fun2()
-Fun2()
+// Fun2()
+// Fun2()
+// Fun2()
+// Fun2()
 
-// Parameters = it is defined into the Function name parenthesis
-//  Arguments =  ,it is defined into the function calling parenthesis
-
-
-function Fin3(a, b) {
-    c = a + b
-    return (c)
-}
-
-let add = Fin3(20, 40)
-console.log(add)
-let add1 = Fin3(100, 40)
-console.log(add1)
-let add2 = Fin3(200, 40)
-console.log(add2)
-let add3 = Fin3(20, 400)
-console.log(add3)
-let add4 = Fin3(20, 408)
-console.log(add4)
+// // Parameters = it is defined into the Function name parenthesis
+// //  Arguments =  ,it is defined into the function calling parenthesis
 
 
-// default parameters 
-function Def(a, b = 39) {
-    z = a * b
-    return z
-}
+// function Fin3(a, b) {
+//     c = a + b
+//     return (c)
+// }
 
-let def = Def(3, 8)
-console.log(def)
-
-
-function Def(a) {
-    z = 10 * b
-    return z
-}
-
-let def1 = Def(3)
-console.log(def1)
+// let add = Fin3(20, 40)
+// console.log(add)
+// let add1 = Fin3(100, 40)
+// console.log(add1)
+// let add2 = Fin3(200, 40)
+// console.log(add2)
+// let add3 = Fin3(20, 400)
+// console.log(add3)
+// let add4 = Fin3(20, 408)
+// console.log(add4)
 
 
-a = 20
-b = 30
-function defa(a,b){
-    x = a+b
-    return x 
-}
+// // default parameters 
+// function Def(a, b = 39) {
+//     z = a * b
+//     return z
+// }
+
+// let def = Def(3, 8)
+// console.log(def)
 
 
-let defa1 = defa(a,b)
-console.log(defa1)
+// function Def(a) {
+//     z = 10 * b
+//     return z
+// }
+
+// let def1 = Def(3)
+// console.log(def1)
 
 
-function defa(a){
-    x = a+b
-    return x 
-}
+// a = 20
+// b = 30
+// function defa(a,b){
+//     x = a+b
+//     return x 
+// }
 
+
+// let defa1 = defa(a,b,)
+// console.log(defa1)
+
+
+// function defa(a){
+//     x = a+b
+//     return x 
+// }
+
+
+
+// Dom - Document Object Model 
+
+//  With the help of we can access , change, append , remove , createElements 
+//  with the help of we can apply style properties 
+
+//  Access the dom elements
+// getElementsById()
+// getElementsByClassNmae()
+// getElementsByTagName()
+// querySelector()
+// querySelectorAll() 
+
+
+document.getElementById("div").innerHTML = "This is my div"
+document.getElementsByClassName("cl")[0].innerHTML =  "Heloo this is my class"
+
+let p = document.createElement("p")
+let div = document.getElementById("div") 
+
+div.appendChild(p)
+
+// removeAttribute 
+let cr = p.setAttribute("id","para")
+
+div.style.backgroundColor = "red"
+div.style.backgroundColor = "red"
+div.style.backgroundColor = "red" 
+div.style.backgroundColor = "red"
+div.removeChild(p)
 
 
 
