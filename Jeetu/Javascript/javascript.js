@@ -80,11 +80,3 @@ console.log(y)
 // C. const can be a block scope 
 //  
 
-
-
-
-
-
-
-
-
