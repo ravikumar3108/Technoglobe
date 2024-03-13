@@ -3,14 +3,14 @@ const express = require('express')
 const app = express()
 const fs = require('fs')
 const bodyparser = require('body-parser')
-app.set('view engine','ejs') 
+app.set('view engine', 'ejs')
 const mongoose = require('mongoose');
 
-// const {MongoClient} = require('mongodb')
+const { MongoClient } = require('mongodb')
 //  const {MongoClient} = require('mongodb')
 // const exp = require('constants')
 
-// const connect = new MongoClient('mongodb://0.0.0.0:27017')
+const connect = new MongoClient('mongodb://0.0.0.0:27017')
 
 //  async function mongoData(){
 //     let con = await connect.connect()
@@ -20,10 +20,42 @@ const mongoose = require('mongoose');
 //     console.log(alldata)
 // }
 // mongoData()
+let urlencoded = bodyparser.json()
+let urlencoded1 = bodyparser.urlencoded({})
 
+
+
+app.get("/signup", (req, res) => {
+    res.render("signup")
+})
+app.get("/login", (req, res) => {
+    res.render("login")
+})
+
+app.post("/login", urlencoded1, async (req, res) => {
+    let con = await connect.connect()
+    let data = connect.db("Priyanshu")
+    let collection = data.collection("pappu")
+    collection.find({ "first": req.body.first, "last": req.body.last, "password": req.body.password }).toArray()
+    .then(result=>{
+        if(result.length>0)
+        res.redirect('home');
+        else
+        res.send('invalid data')
+     })
+
+    // console.log(req.body)
+})
+
+app.post("/signup", urlencoded1, async (req, res) => {
+    let con = await connect.connect()
+    let data = connect.db("Priyanshu")
+    let collection = data.collection("pappu")
+    collection.insertOne(req.body)
+})
 
 app.use(express.json())
-app.use("/app/user",require("./routes/applic"))
+app.use("/app/user", require("./routes/applic"))
 
 
 
@@ -44,13 +76,7 @@ app.use("/app/user",require("./routes/applic"))
 
 // // let replace = fileread.replace("hii","heloo")
 // // console.log(replace)
-// let urlencoded = bodyparser.json()
-// let urlencoded1 = bodyparser.urlencoded({})
 
-// app.post("/submit",urlencoded1,(req,res)=>{
-//     res.send(req.body)
-//     console.log(req.body)
-// })
 
 // app.get("",(req,res)=>{
 //     res.send("hleo priyanshu")
@@ -65,7 +91,7 @@ app.use("/app/user",require("./routes/applic"))
 // })
 
 console.log("hii")
-app.listen(5000,()=>{
+app.listen(5000, () => {
     console.log("server crtera")
 })
 
