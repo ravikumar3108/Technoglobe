@@ -1,0 +1,35 @@
+#login , #register{
+  padding-top:100px ;
+}
+.navbar a {
+  color: white !important;
+}
+
+/*  -===========  Silder ====================== */
+img{
+  width: 100%;
+  animation: fead 2s;
+}
+
+@keyframes fead{
+  0%{
+    opacity: 0.6;
+    transform: scale(0);
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1);
+  }
+
+}
+.slider{display: flex;overflow: hidden;height: 450px; position: relative;}
+.slider .content{position: absolute; top: 100px; left: 200px;} 
+.slider .items{position: relative;}
+.slider .d-none{display: none;}
+.slider .slide-btn1{position: absolute;left: 50px;
+  top: 200px; background-color: #0084d6;border: none;background: transparent;
+}
+.slider  i{font-size: 78px;}
+.slider .slide-btn2{position: absolute;right: 50px;
+  top: 200px; background-color: #0084d6;border: none;background: transparent;
+} 

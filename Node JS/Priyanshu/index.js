@@ -9,15 +9,18 @@ let urlencoded = bodyparser.json()
 let urlencoded1 = bodyparser.urlencoded({})
 let main = require("./config/dbConnection")
 let User = require("./models/userSchema")
-
+let cors = require('cors')
 main()
+
 app.use(express.json())
+const corsOptions ={
+    origin:'http://localhost:3001', 
+    credentials:true,            //access-control-allow-credentials:true
+    optionSuccessStatus:200
+  }
+
+app.use(cors(corsOptions))
 app.use("/app/user", require("./routes/applic"))
-
-
-
-
-
 
 
 // const { MongoClient } = require('mongodb')
@@ -97,7 +100,7 @@ app.use("/app/user", require("./routes/applic"))
 // })
 
 console.log("hii")
-app.listen(5000, () => {
+app.listen(8080, () => {
     console.log("server crtera")
 })
 
