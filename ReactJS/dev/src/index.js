@@ -9,9 +9,6 @@ root.render(
   <React.StrictMode>
     {/* Call the function component */}
    <App/>
-   <App/>
-   <App/>
-   <App/>
   </React.StrictMode>
 );
 

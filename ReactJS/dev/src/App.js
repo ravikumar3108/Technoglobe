@@ -3,17 +3,17 @@
 // Export the Component
 // Call the function Component
 
+import "./App.css"
+import Home from "./components/Home"
+
+
 function App() {
   return (
     // <></> JSX fragments :- this fragments allow to wriiten html code
-    <>
-      <div>
-        <div>
-          <h1>Helooo</h1>
-        </div>
-      </div>
-      <div></div>
-    </>
+   <>
+   <Home/>
+   <h1>Hello My first Page </h1>
+   </>
   )
 }
 
