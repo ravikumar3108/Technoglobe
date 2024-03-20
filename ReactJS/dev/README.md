@@ -40,3 +40,16 @@ Components can be rendered to a particular element in the DOM using the React DO
 1. install node js : npm i -g create-react-app
 2. Create a react app by :- (npx create-react-app (foldernmae) )
 3. Start the app : - npm start 
+
+Routing :- \
+npm i react-router-dom 
+
+
+Syntax of routing :-
+ <!-- <BrowserRouter>
+      <Routes>
+         <Route path="" element={}/>
+      </Routes>
+</BrowserRouter> -->
+
+
