@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        p {
+            width: 20%;
+            height: 200px;
+            border: 1px solid;
+            overflow: hidden;
+            overflow: auto;
+            overflow: scroll;
+        }
+        .box{
+            border: 1px solid;
+            width: 200px;
+            height: 200px;
+            margin-left: 200px;
+            background-color: rgb(243, 239, 239);
+            /* box-shadow: 10px 20px 10px 20px green; */
+            /* background-image: linear-gradient(red,green);
+            background-image: radial-gradient(green,white); */
+        }
+
+        /* pseudo-elements 
+            first line 
+            first letter 
+            before 
+            after
+            hover
+        
+        */
+        .box:hover{
+            background-color: green;
+        }
+        .box:hover h6{
+            font-size: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo ut a aperiam eos nostrum animi quis commodi
+        laboriosam, autem ipsum natus esse asperiores repellat, tenetur quo veniam rerum laborum id!
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt soluta doloribus porro omnis culpa impedit.
+        Quod impedit Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim deserunt beatae expedita facilis eum
+        perspiciatis tempore, quod optio eos atque, delectus et asperiores sunt explicabo, dignissimos porro praesentium
+        ad ea?
+        , odio deleniti doloribus autem tenetur natus ipsum accusamus ipsam nam, fuga et pariatur!
+    </p>
+
+    <div class="box">
+        <h6>Head</h6>
+    </div>
+
+</body>
+
+</html>
