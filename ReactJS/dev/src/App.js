@@ -14,13 +14,13 @@ function App() {
   return (
     // <></> JSX fragments :- this fragments allow to wriiten html code
     <>
-    <BrowserRouter>
-    <Navbar/>
-      <Routes>
-         <Route path="/home" element={<Home/>}/>
-         <Route path="/about" element={<About/>}/>
-      </Routes>
-    </BrowserRouter>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/home" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
