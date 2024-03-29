@@ -3,7 +3,7 @@ import img from "./images/djj3.jpg";
 
 function Home() {
   let username = "Jeetu";
-  let age = 30
+  let age = 30;
   return (
     <>
       <h1>
@@ -26,7 +26,7 @@ function Home() {
         deserunt quod, expedita voluptatem, veritatis dolorem ad quasi fuga
         iusto voluptate.
       </p>
-      <Pro img={img} name={username} age = {age}/>
+      <Pro img={img} name={username} age={age} />
     </>
   );
 }

@@ -6,7 +6,7 @@
 import "./App.css"
 import Home from "./components/Home"
 import About from "./components/About"
-import Login from "./components/Login";
+// import Login from "./components/Login";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 
