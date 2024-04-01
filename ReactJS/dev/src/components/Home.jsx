@@ -6,7 +6,10 @@ function Home() {
   let age = 30;
   return (
     <>
-      <h1>
+    <h1></h1>
+    <img src="" alt="" />
+    <p></p>
+      {/* <h1>
         when we use js in our react html we can use into the curley brackets
       </h1>
       <h2>{username}</h2>
@@ -25,8 +28,8 @@ function Home() {
         totam reiciendis sed placeat voluptatibus ducimus odit facilis veniam
         deserunt quod, expedita voluptatem, veritatis dolorem ad quasi fuga
         iusto voluptate.
-      </p>
-      <Pro img={img} name={username} age={age} />
+      </p> */}
+      {/* <Pro img={img} name={username} age={age} /> */}
     </>
   );
 }

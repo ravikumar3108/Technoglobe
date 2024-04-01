@@ -21,6 +21,7 @@ function About() {
     left side  = props name
     right side = data
     */}
+    <h1></h1>
     <ProChild  image2 = {image2} name = {username}/>
   </>
   )
