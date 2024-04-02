@@ -7,27 +7,28 @@ function Register() {
   let [email, setEmail] = useState();
   let [name, setName] = useState();
   let [password, setPass] = useState();
-  console.log(email, name, password);
+
+  // console.log(email, name, password);
+
+  // function getValue(e) {
+  //   setEmail(e.target.value);
+  // }
 
   async function handleSubmit(e) {
     e.preventDefault();
     let res = await axios
-      .post(
-        "http://localhost:8080/app/user/register",
-        { email, password, name },
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      )
+      .post("http://localhost:3030/register", {
+        email,
+        password,
+        name,
+      })
       .then((res) => {
         console.log(res);
       })
       .catch((err) => {
         console.log(err);
       });
-    console.log(res);
+    // console.log(res);
   }
 
   return (
@@ -79,7 +80,7 @@ function Register() {
                 <button type="submit" className="btn btn-primary me-3">
                   Register
                 </button>
-                <Link to="/">Login</Link>
+                <Link to="/login">Login</Link>
               </form>
             </div>
           </div>

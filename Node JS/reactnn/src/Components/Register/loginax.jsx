@@ -12,9 +12,20 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:8080/app/user/login", { email, password })
+      .post("http://localhost:3030/login", { email, password })
       .then((result) => {
-        console.log(result);});
+        console.log(result);
+        console.log(result.data.message);
+
+        if (result.data.message == "Succesfull") {
+          nav("/home")
+        } else {
+          alert("unsuccesfull");
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   return (
