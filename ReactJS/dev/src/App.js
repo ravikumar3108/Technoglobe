@@ -10,6 +10,7 @@ import About from "./components/About"
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Usestatae1 from "./components/Usestatae";
+import Form from "./components/Form";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/" element={<Home/>}/>
           <Route path="/about1" element={<About/>}/>
           <Route path="/usestate" element={<Usestatae1/>}/>
+          <Route path="/form" element={<Form/>}/>
           {/* <Route path="/" element={<Home/>}/> */}
         </Routes>
 
