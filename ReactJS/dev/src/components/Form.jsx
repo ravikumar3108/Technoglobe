@@ -7,14 +7,14 @@ function Form() {
 
   const [data, setData] = useState("");
   // console.log(name)
-console.log(data)
-  function getValue(e){
-    //  Spread opertaor ... 
+  console.log(data);
+  function getValue(e) {
+    //  Spread opertaor ...
 
     setData({
       ...data,
-      [e.target.name] : e.target.value
-    })
+      [e.target.name]: e.target.value,
+    });
   }
 
   function onChnage(e) {
@@ -29,9 +29,9 @@ console.log(data)
 
   return (
     <div>
-     <h1>{data.username}</h1>
-     <h1>{data.email}</h1>
-     <h1>{data.phone}</h1>
+      <h1>{data.username}</h1>
+      <h1>{data.email}</h1>
+      <h1>{data.phone}</h1>
       <form action="">
         <input
           type="text"
