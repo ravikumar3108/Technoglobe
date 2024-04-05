@@ -8,7 +8,6 @@ function Home1() {
     let age = 67
     let rollno = 26
 
-
   return (
     <div>
       <h1>Helooo</h1>

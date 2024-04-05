@@ -9,6 +9,7 @@ function Home() {
     <h1></h1>
     <img src="" alt="" />
     <p></p>
+    <h1>Hooem Compo</h1>
       {/* <h1>
         when we use js in our react html we can use into the curley brackets
       </h1>

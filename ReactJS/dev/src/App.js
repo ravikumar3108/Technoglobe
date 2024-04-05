@@ -12,6 +12,7 @@ import Navbar from "./components/Navbar";
 import Usestatae1 from "./components/Usestatae";
 import Form from "./components/Form";
 import Home1 from "./components/Somendar/Home";
+import Login from "./components/Login";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path="/usestate" element={<Usestatae1/>}/>
           <Route path="/form" element={<Form/>}/>
           <Route path="/home1" element={<Home1/>}/>
+          <Route path="/login" element={<Login/>}/>
           {/* <Route path="/form1" element={<Form/>}/>
           <Route path="/form2" element={<Form/>}/>
           <Route path="/form3" element={<Form/>}/>
