@@ -3,6 +3,7 @@ import Pro from "./Props";
 import image from "./images/djj3.jpg"
 import ProChild from "./ProChild";
 import image2 from "./images/pexels-josh-sorenson-1714205.jpg"
+import Api from "./Api";
 
 function About() {
 
@@ -13,16 +14,16 @@ function About() {
   <h2>My name is{username}</h2>
     <h1>About Componets</h1>
     <img src={image} alt="" width="100%" />
-
-
-
     <h1>Section 2 </h1>
+    <Api/>
+
+
     {/* 
     left side  = props name
     right side = data
     */}
-    <h1></h1>
-    <ProChild  image2 = {image2} name = {username}/>
+    {/* <h1></h1>
+    <ProChild  image2 = {image2} name = {username}/> */}
   </>
   )
 }
