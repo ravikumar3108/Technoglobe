@@ -8,3 +8,7 @@
 /* .header h1{
 
 } */
+
+.slide .d-none{
+    display: none;
+}

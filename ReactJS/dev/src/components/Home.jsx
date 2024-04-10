@@ -1,4 +1,5 @@
 import Pro from "./Props";
+import Slider from "./Slider";
 import img from "./images/djj3.jpg";
 
 function Home() {
@@ -6,10 +7,9 @@ function Home() {
   let age = 30;
   return (
     <>
-    <h1></h1>
-    <img src="" alt="" />
-    <p></p>
+  
     <h1>Hooem Compo</h1>
+    <Slider/>
       {/* <h1>
         when we use js in our react html we can use into the curley brackets
       </h1>
