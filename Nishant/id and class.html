@@ -14,23 +14,24 @@
         3. external css = style sheet
 
      -->
-<!-- 
+    <!-- 
     Css Selectors :- 
     1.id = unique
     2.class = multiples 
     3. tagname 
     4. * (universal selector)
     5. Apply css on Multiple tags
-
  -->
-
- <style>
-
-    /*
+    <style>
+        /*
      selectorname{
         propertyname : value
     }
      */
+
+        /* *{
+        border: 1px solid;
+     }
 
     p{
         color: green;
@@ -52,9 +53,19 @@
         background-color: blue;
     }
 
+    .link , .link1 , .link2{
+        background-color: green;
+    } */
 
+    /* h2{
+        background-color: blue;
+    } */
 
- </style>
+    .main .box h2{
+        color: green;
+    }
+
+    </style>
 
 
 </head>
@@ -62,7 +73,7 @@
 <body>
 
 
-    <h1 style="color: aquamarine; background-color: green;">Heading</h1>
+    <!-- <h1 style="color: aquamarine; background-color: green;">Heading</h1>
     <hr>
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.  <br>
         Sequi in repudiandae non consectetur quidem omnis <br>
@@ -83,6 +94,45 @@
         <h3 class="btn">Heading 3</h3>
         <h2 class="btn">Heading 2</h2>
         <h3 class="btn"> Heading 3</h3>
+
+
+        <a href="" class="link">Link</a>
+        <a href="" class="link1">Link</a>
+        <a href="" class="link2">Link</a>
+        <a href="" class="link3">Link</a>
+        <a href="" class="link4">Link</a> -->
+
+    <!--  dividion  <div> Container </div>
+         -->
+
+    <div class="main">
+        <div class="box">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis id soluta suscipit est quas delectus, quod
+                error! Perspiciatis fuga, soluta quam autem, asperiores veritatis dolor magnam dolore ipsa voluptatibus
+                fugit.</p>
+            <h1>heading1</h1>
+            <h2>Heading 2</h2>
+        </div>
+        <div class="box2">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis id soluta suscipit est quas delectus, quod
+                error! Perspiciatis fuga, soluta quam autem, asperiores veritatis dolor magnam dolore ipsa voluptatibus
+                fugit.</p>
+            <h1>heading1</h1>
+            <h2>Heading 2</h2>
+        </div>
+        <div class="box1">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis id soluta suscipit est quas delectus, quod
+                error! Perspiciatis fuga, soluta quam autem, asperiores veritatis dolor magnam dolore ipsa voluptatibus
+                fugit.</p>
+            <h1>heading1</h1>
+            <h2>Heading 2</h2>
+        </div>
+    </div>
+
+    <h2>External heading</h2>
+    
+    
+
 </body>
 
 </html>
