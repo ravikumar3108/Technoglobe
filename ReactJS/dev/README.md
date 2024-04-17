@@ -16,9 +16,9 @@ Babel is a free and open-source JavaScript compiler.
 
 MVC Pattern:MVC (Model-View-Controller) is a pattern in software design commonly used to implement user interfaces, data, and controlling logic.
 
-M:Model : business logic Layer
+M:Model : business logic Layer 
 V:View	:presentation layer
-C:Controller : Application Layer
+C:Controller : Application Layer 
 
 React 
 V:View	:presentation layer
@@ -36,12 +36,17 @@ Components
 React code is made of entities called components. 
 Components can be rendered to a particular element in the DOM using the React DOM library.
 
+1.React works on Virtaul Dom 
+2.JSX - Jsx allow to wriiten our html elements 
+3. Onedirectional :- 
 
 1. install node js : npm i -g create-react-app
 2. Create a react app by :- (npx create-react-app (foldernmae) )
 3. Start the app : - npm start 
 
-Routing :- \
+
+
+Routing :- 
 npm i react-router-dom 
 
 

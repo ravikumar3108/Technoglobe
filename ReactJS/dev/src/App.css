@@ -12,3 +12,108 @@
 .slide .d-none{
     display: none;
 }
+
+
+
+/* Project Csss */
+
+.navbar{
+    background-color: black;
+    color: white;
+
+}
+.navbar ul li{
+    display: inline-block;
+    margin: 10px 20px;
+    padding: 10px 20px;
+}
+
+.navbar a{
+    color: white;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.left-container {
+    width: 48%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.right-container {
+    width: 48%;
+    height: 550px;
+
+}
+
+.left-container img {
+    width: 85%;
+}
+#signup form {
+    padding: 30px 93px;
+}
+#signup{
+    height: 95vh;
+}
+#login{height: 80vh;}
+#login form { padding: 100px 93px; }
+
+form .or{
+    text-align: center;
+    margin-left: -100px;
+}
+
+form input {
+    padding: 10px;
+    border-radius: 17px;
+    width: 70%;
+    margin-top: 10px;
+}
+ input[type = "checkbox"]{
+    width: auto !important; 
+}
+
+form h1 {
+    font-size: xx-large;
+}
+form label {
+    font-size: larger;
+}
+.right-container button {
+    width: 77%;
+    padding: 9px;
+    border-radius: 15px;
+    background-color: lightblue;
+}
+.right-container button:hover {
+    background-color:royalblue ;
+}
+
+/*  =============Profile Section ============== */
+#profile{
+    border: 1px solid;
+    display: flex;
+    justify-content: space-between;
+    height: 97vh;
+}
+#profile .user-avatar{width: 30%;}
+#profile .user-details{width: 48%;
+    border-left: 1px solid black;
+    height: 80vh;
+    margin-left: 50px;
+    text-align: center;
+}
+#profile .user-details span{
+    color: blueviolet;
+}
+
+
+
+
