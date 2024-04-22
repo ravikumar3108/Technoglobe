@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import loaderimg from "../Images/200w.gif"
 function Api() {
   let [Api, setApi] = useState([]);
   console.log(Api);
@@ -20,18 +20,21 @@ function Api() {
       {/* Default Api  */}
       {/* https://fakestoreapi.com/products */}
 
-      {Api.map((item) => {
-        return (
-          <>
-            <h1>{item.id}</h1>
-            <h1>{item.title}</h1>
-            <h1>{item.price}</h1>
-          </>
-        );
-      })}
+      {Api.length > 0 ? (
+        Api.map((item) => {
+          return (
+            <>
+              <h1>{item.id}</h1>
+              <h1>{item.title}</h1>
+              <h1>{item.price}</h1>
+            </>
+          );
+        })
+      ) : (
+       <img src={loaderimg} alt="" width="100%" height="200px" />
+      )}
     </div>
   );
 }
-
 
 export default Api;

@@ -1,14 +1,11 @@
 import React, { useState } from "react";
 import logimg from "../Images/Work.jpg";
 import { Link, useNavigate } from "react-router-dom";
+import toast, { Toaster } from "react-hot-toast";
 
 function Loginp() {
-
-
   let [data, setData] = useState("");
-//   console.log(data);
-
-    let nav  =  useNavigate()
+  let nav = useNavigate();
 
   function getValue(e) {
     setData({
@@ -17,20 +14,29 @@ function Loginp() {
     });
   }
 
-  function handlelogin(e) {
-    e.preventDefault()
-        let user = JSON.parse(localStorage.getItem("Jeetu"))
-        console.log(user.username)
-        if(user.email === data.email && user.password === data.password){
-            nav("/")
-        }else{
-            alert("Something wrong !!!!")
-        }
+
+  function toastError(){
+    toast.error("Something Wrong")
   }
 
 
+  function handlelogin(e) {
+    e.preventDefault();
+    let user = JSON.parse(localStorage.getItem("Jeetu"));
+    console.log(user.username);
+    if (user.email === data.email && user.password === data.password) {
+      toast.success("User is created")
+      setTimeout(() => {
+        nav("/");
+      }, 3000);
+    } else {
+      toastError()
+    }
+  }
+
   return (
     <div>
+      <Toaster />
       <div>
         <div id="login">
           <div className="main-div">

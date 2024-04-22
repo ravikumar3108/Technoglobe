@@ -17,6 +17,7 @@ function Signupp() {
   function getData(e) {
     e.preventDefault()
     localStorage.setItem("Jeetu", JSON.stringify(data));
+    
   }
 
   return (
