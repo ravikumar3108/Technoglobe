@@ -94,3 +94,49 @@
 // }
 
 
+//  Array :-  Array is used to store multiple values
+
+// array works on index number  0,1,2,3
+
+let arr = ["Kuldeep","ravi","dev","somendar","shiv"]
+
+console.log(arr)
+
+//  Access the values 
+
+let acc = arr[0]
+console.log(acc)
+
+// length 
+console.log(arr.length)
+
+//  methods 
+
+// pop()  = which is used to remove last value of our array 
+//  push() =  which is used to add last value of our array 
+//  shift() = which is used to remove first value of our array 
+// unshift() = which is used to add last first of our array 
+
+arr.pop()
+console.log(arr)
+arr.push("PAwan")
+console.log(arr)
+
+arr.shift()
+console.log(arr)
+
+arr.unshift("hii")
+console.log(arr)
+
+ 
+// splice()  = which is used to 
+//  value add , remove 
+// 3. arguments ==== 1. index number , 2.remove item 3. add values
+// slice() = cut an existing array into new array 
+
+arr.splice(2,2,1,3,4,6)
+console.log(arr)
+
+
+
+
