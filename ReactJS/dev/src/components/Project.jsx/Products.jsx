@@ -1,5 +1,5 @@
 import React from 'react'
-import Api from '../practice/Api'
+import Api from './Api'
 
 function Products() {
   return (
