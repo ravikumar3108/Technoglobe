@@ -98,7 +98,7 @@
 
 // array works on index number  0,1,2,3
 
-let arr = ["Kuldeep","ravi","dev","somendar","shiv"]
+let arr = ["Kuldeep", "ravi", "dev", "somendar", "shiv"]
 
 console.log(arr)
 
@@ -128,15 +128,60 @@ console.log(arr)
 arr.unshift("hii")
 console.log(arr)
 
- 
+
 // splice()  = which is used to 
 //  value add , remove 
 // 3. arguments ==== 1. index number , 2.remove item 3. add values
 // slice() = cut an existing array into new array 
 
-arr.splice(2,2,1,3,4,6)
+arr.splice(2, 2, 1, 3, 4, 6)
 console.log(arr)
 
+//  concat()  = which is used to add multiples array 
+
+let arr1 = [1, 2, 3, 4, 6, 87, 9, 0, 98]
+let arr2 = ["a", "b", "e", "t"]
+
+let arr3 = arr1.concat(arr2, arr)
+console.log(arr3)
+
+// delete 
+
+delete arr1[3]
+
+console.log(arr1)
+
+//  reverse() = reverse our array
+//  sort()  = arrange alphabetically orders
 
 
 
+//  String :- String works on index number 
+//  String also count white spaces 
+
+// replace() => 2 parameters = first Exist in your sting  , second = replace by second value 
+// //  replaceAll()
+// // toUpperCase()
+// // toLowerCase()
+// // concat() 
+// // slice() 
+// // trim()
+// // trimStart()
+// // trimEnd()
+// // charAt()
+
+
+let c = "               my name is ravi.my              name is Ravi.my name is ravi                         "
+
+
+ let newstr = c.replaceAll("ravi", "kuldeep")
+
+console.log(newstr)
+
+let up = c.toUpperCase()
+console.log(up)
+
+console.log(c.length)
+let st = c.trim()
+
+console.log(st.length)
