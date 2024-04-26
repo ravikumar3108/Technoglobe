@@ -23,15 +23,14 @@ function App() {
     <>
         <BrowserRouter>
            <Navbar/>
-           <Signup/>
-           <Login/>
-          {/* <Routes>
+          
+          <Routes>
             <Route path="/" element={<Home/>}/>
             <Route path="/about" element={<About/>}/>
             <Route path="/cart" element={<Cart/>}/>
-            <Route path="/login" element={<Home/>}/>
-            <Route path="/signup" element={<Home/>}/>
-          </Routes> */}
+            <Route path="/login" element={<Login/>}/>
+            <Route path="/signup" element={<Signup/>}/>
+          </Routes>
         
         </BrowserRouter>
     </>

@@ -5,6 +5,17 @@ function Signup() {
   let [email, setEmail] = useState();
   let [password, setPassword] = useState();
 
+  let [allData, setAllData] = useState("");
+
+  console.log(allData);
+
+  function getValue(e) {
+    setAllData({
+      ...allData,
+      [e.target.name]: e.target.value,
+    });
+  }
+
   function getData(e) {
     setName(e.target.value);
   }
@@ -12,7 +23,7 @@ function Signup() {
     setEmail(e.target.value);
   }
 
-//   const getData3 = () => {};
+  //   const getData3 = () => {};
 
   //    Arrow Function => () => {}
 
@@ -20,33 +31,33 @@ function Signup() {
 
   return (
     <div>
-      <h1>Name : {name}</h1> <br />
+      <h1>Signup Form</h1>
+      <h1>Name : {allData.name}</h1> <br />
       <h1>Email : {email}</h1> <br />
       <h1>Password : {password}</h1> <br />
       <form action="" style={{ marginBottom: "100px" }}>
         <input
           type="text"
-          name=""
+          name="name"
           id=""
           placeholder="Nmae"
-          onChange={getData}
+          onChange={getValue}
         />
         <input
           type="text"
-          name=""
+          name="email"
           id=""
           placeholder="Email"
-          onChange={getData1}
+          onChange={getValue}
         />
         <input
           type="text"
-          name=""
+          name="password"
           id=""
           placeholder="Password"
-          onChange={(e) => {
-            setPassword(e.target.value);
-          }}
+          onChange={getValue}
         />
+        <button type="submit">Signup</button>
       </form>
     </div>
   );
