@@ -12,11 +12,11 @@ function changeState(){
    setValue(intialValue * 3)
 }
 
+
+
 function changeState1(){
     setValue1("Ravi")
 }
-
-
   return (
     <div>    
        <h1>{intialValue}</h1>

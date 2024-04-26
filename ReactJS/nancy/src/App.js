@@ -5,6 +5,8 @@ import Cart from "./components/Cart";
 import About from "./components/About";
 import Navbar from "./components/Navbar";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Signup from "./components/Signup";
+import Login from "./components/Login";
 
 //  Create a function componenets
 // export 
@@ -21,13 +23,15 @@ function App() {
     <>
         <BrowserRouter>
            <Navbar/>
-          <Routes>
+           <Signup/>
+           <Login/>
+          {/* <Routes>
             <Route path="/" element={<Home/>}/>
             <Route path="/about" element={<About/>}/>
             <Route path="/cart" element={<Cart/>}/>
             <Route path="/login" element={<Home/>}/>
             <Route path="/signup" element={<Home/>}/>
-          </Routes>
+          </Routes> */}
         
         </BrowserRouter>
     </>
