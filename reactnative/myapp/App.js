@@ -1,7 +1,7 @@
 
-import { View, Text, SafeAreaView, StyleSheet, Button, Image, ImageBackground } from "react-native"
+import { View, Text, SafeAreaView, StyleSheet, Button, Image, ImageBackground, ActivityIndicator } from "react-native"
 import Home from "./components/Home"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 
 //  Csss : inline , stylesheet , multiple Css 
@@ -16,29 +16,60 @@ function App() {
   // }
 
 
+  let [initailvalue, setValue] = useState("")
+  let [initailvalue1, setValue1] = useState("Somendra")
+  console.log(initailvalue)
+  // function chnageState(){
+  //   setValue(initailvalue * 3)
+  // }
 
+  // function chnageState1(){
+  //   setValue1("dev")
+  // }
+
+
+  useEffect(() => {
+    handleApi()
+  },[])
+
+  const handleApi = async () => {
+    const data =  await fetch("https://fakestoreapi.com/products/2")
+    let dt = await data.json()
+    setValue(dt)
+  }
 
   return (
     <>
-      <View style={css.main}>
+      {/*  <View style={css.main}>
         <View style={css.view}></View>
         <View style={css.view2}></View>
         <View style={css.view3}></View>
         <View style={css.view4}></View>
-      </View>
+      </View>*/}
+
+      {/* <View style={{marginTop:100,}}>
+        <Text>{initailvalue}</Text>
+        <Text>{initailvalue1}</Text>
+        <Button
+        title="click"
+        onPress={()=>{chnageState(),chnageState1()}}
+        color={"red"}
+        />
+      </View> */}
     </>
   )
 }
 
+
 const css = StyleSheet.create({
   main: {
     backgroundColor: "green",
-    marginTop:100,
-    flex:1,
-    flexDirection:"row",
-    justifyContent:"space-around",
-    alignItems:"center",
-    flexWrap:"wrap-reverse"
+    marginTop: 100,
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "space-around",
+    alignItems: "center",
+    flexWrap: "wrap-reverse"
   },
   view: {
     width: 50,
