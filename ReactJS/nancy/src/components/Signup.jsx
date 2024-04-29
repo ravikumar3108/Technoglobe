@@ -24,18 +24,16 @@ function Signup() {
   }
 
   //   const getData3 = () => {};
-
   //    Arrow Function => () => {}
 
-  //
+  function handleSubmit(e) {
+    e.preventDefault()
+    localStorage.setItem("Users",JSON.stringify(allData))
+  }
 
   return (
     <div>
-      <h1>Signup Form</h1>
-      <h1>Name : {allData.name}</h1> <br />
-      <h1>Email : {email}</h1> <br />
-      <h1>Password : {password}</h1> <br />
-      <form action="" style={{ marginBottom: "100px" }}>
+      <form action="" style={{ marginBottom: "100px" }} onSubmit={handleSubmit}>
         <input
           type="text"
           name="name"
