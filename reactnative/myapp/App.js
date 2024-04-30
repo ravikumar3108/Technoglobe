@@ -2,6 +2,12 @@
 import { View, Text, SafeAreaView, StyleSheet, Button, Image, ImageBackground, ActivityIndicator } from "react-native"
 import Home from "./components/Home"
 import { useEffect, useState } from "react"
+import Slider from "./components/Slider"
+import { NavigationContainer } from "@react-navigation/native"
+import { createNativeStackNavigator } from "@react-navigation/native-stack"
+import About from "./components/About"
+import Contact from "./components/Contact"
+import Navbar from "./components/Navbar"
 
 
 //  Csss : inline , stylesheet , multiple Css 
@@ -16,9 +22,9 @@ function App() {
   // }
 
 
-  let [initailvalue, setValue] = useState("")
-  let [initailvalue1, setValue1] = useState("Somendra")
-  console.log(initailvalue)
+  // let [initailvalue, setValue] = useState("")
+  // let [initailvalue1, setValue1] = useState("Somendra")
+  // console.log(initailvalue)
   // function chnageState(){
   //   setValue(initailvalue * 3)
   // }
@@ -28,18 +34,40 @@ function App() {
   // }
 
 
-  useEffect(() => {
-    handleApi()
-  },[])
+  // useEffect(() => {
+  //   handleApi()
+  // },[])
 
-  const handleApi = async () => {
-    const data =  await fetch("https://fakestoreapi.com/products/2")
-    let dt = await data.json()
-    setValue(dt)
-  }
+  // const handleApi = async () => {
+  //   const data =  await fetch("https://fakestoreapi.com/products/2")
+  //   let dt = await data.json()
+  //   setValue(dt)
+  // }
+
+  const Stack = createNativeStackNavigator()
 
   return (
     <>
+
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen name="navbar" component={Navbar} />
+          <Stack.Screen name="about" component={About} />
+          <Stack.Screen name="contact" component={Contact} />
+        </Stack.Navigator>
+      </NavigationContainer>
+
+
+
+
+
+
+
+
+
+
+
+      {/* <Slider/> */}
       {/*  <View style={css.main}>
         <View style={css.view}></View>
         <View style={css.view2}></View>
@@ -56,6 +84,7 @@ function App() {
         color={"red"}
         />
       </View> */}
+
     </>
   )
 }

@@ -1,0 +1,6 @@
+const navbar = [
+    {
+        title:"hjdjd",
+        
+    }
+]
