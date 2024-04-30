@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import Api from "./Api";
 
 function Cart() {
   return (
     <div>
-     <h1> Cart</h1>
+      <Api />
     </div>
-  )
+  );
 }
 
-export default Cart
+export default Cart;
