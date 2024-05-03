@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div {
+            width: 200px;
+            height: 200px;
+            border: 1px solid;
+            overflow: auto;
+        }
+
+        /* .div:hover{
+            background-color: aqua;
+            font-size: 20px;
+            color: red;
+        } */
+
+        .div:hover .n {
+            color: green;
+        }
+
+        .n:hover {}
+        .div p::selection{
+            color: blue;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<!-- 
+    hover = effect on mouse over the elements
+    Pseudo elements :- 
+::first-line Pseudo-element
+::first-letter Pseudo-element
+::before Pseudo-element
+::after Pseudo-element
+::marker Pseudo-element
+::selection Pseudo-element
+    selector:pseudoelements{
+
+    }
+ -->
+
+
+<body>
+    <div class="div">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi quaerat reiciendis, quos numquam, ad optio
+            nobis labore autem, officiis eveniet suscipit itaque esse! Voluptate, architecto labore totam vero et
+            corrupti. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut, beatae ea, quo aliquid aut quaerat
+            aspernatur voluptatibus laborum porro nesciunt unde exercitationem velit distinctio, quia repellendus
+            accusamus natus quam. Accusantium.
+        </p>
+    </div>
+
+    <div class="div">
+        <p class="n">Nishant</p>
+        <p class="r">Ravi</p>
+    </div>
+</body>
+
+</html>
