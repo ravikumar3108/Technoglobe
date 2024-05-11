@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
+import Users from "./components/Users";
 
 //  Create a function componenets
 // export 
@@ -30,6 +31,7 @@ function App() {
             <Route path="/cart" element={<Cart/>}/>
             <Route path="/login" element={<Login/>}/>
             <Route path="/signup" element={<Signup/>}/>
+            <Route path="/users" element={<Users/>}/>
           </Routes>
         
         </BrowserRouter>
