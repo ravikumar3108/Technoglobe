@@ -7,11 +7,16 @@ app.listen(8000,()=>{
     console.log("Server is Created")
 })
 
+app.set("view engine" , "ejs")
+
+
+
+console.log("Nodeon running ")
 //  Api's 
 //  get , post , delete , put 
 
 app.get("", (req,res)=>{
-    res.send("Server is run in 8000")
+    res.render("Home.ejs")
 })
 
 
