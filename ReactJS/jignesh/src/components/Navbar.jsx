@@ -5,8 +5,8 @@ import image from "./images/djj1.jpg"
 function Navbar() {
   return (
     <div style={{
-      color:"red",
-      backgroundColor:"blue"
+      // color:"red",
+      // backgroundColor:"blue"
     }}>
       <ul>
         <li>
@@ -16,7 +16,7 @@ function Navbar() {
             <Link to="/about">About</Link>
         </li>
       </ul>
-      <img src={image} alt="" />
+     
     </div>
   )
 }
