@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { json } from "react-router-dom";
 
 function Login() {
   //  USeState()
@@ -25,16 +26,21 @@ console.log(data)
     })
   }
 
+  function handleSubmit(){
+    localStorage.setItem("Bhavesh",JSON.stringify(data))
+  }
+
   return (
     <div>
       {/* {intaialValue}
       <button onClick={changeName}>Name</button> */}
       
-      <form action="">
+      <form action="" onSubmit={handleSubmit}>
         <input
           type="text"
           name="username"
           id=""
+          placeholder="name"
           onChange={handleData}
         />
         <input type="text" name="email" id="" placeholder="email"    onChange={handleData} />

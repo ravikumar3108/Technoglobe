@@ -1,5 +1,6 @@
 import React from "react";
 import Props from "./Props";
+import LoginUser from "./Form/loginUser";
 
 function Home(){
 
@@ -12,7 +13,8 @@ function Home(){
     return(
         <>
         <h1>Home</h1>
-        <Props name1 = {x} age ={age} name2 = {name2}/>
+        <Props name1 = {x} age ={age} name2 = {name2}/>\
+        <LoginUser/>
         </>
     )
 }
