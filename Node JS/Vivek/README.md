@@ -37,3 +37,8 @@ import css in node js:-
 	2. create .css file  
 	3. link css file in html 
 	4. <link rel="stylesheet" href="/css/style.css"/>  
+
+
+
+Install thunder client to body request from extensions 
+
