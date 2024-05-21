@@ -18,6 +18,9 @@ function Navbar() {
         <li>
             <Link to="/api">Api</Link>
         </li>
+        <li>
+            <Link to="/cart">CArt</Link>
+        </li>
       </ul>
      
     </div>
