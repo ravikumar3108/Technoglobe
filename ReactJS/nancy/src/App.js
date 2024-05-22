@@ -8,6 +8,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
 import Users from "./components/Users";
+import { CartProvider } from "react-use-cart";
+import Api from "./components/Api";
 
 //  Create a function componenets
 // export 
@@ -22,19 +24,20 @@ function App() {
     // Path :- Routes path
     // elements: which elements shows in your path
     <>
-        <BrowserRouter>
-           <Navbar/>
-          
+      <BrowserRouter>
+        <CartProvider>
+          <Navbar />
           <Routes>
-            <Route path="/home" element={<Home/>}/>
-            <Route path="/about" element={<About/>}/>
-            <Route path="/cart" element={<Cart/>}/>
-            <Route path="/login" element={<Login/>}/>
-            <Route path="/signup" element={<Signup/>}/>
-            <Route path="/users" element={<Users/>}/>
+            <Route path="/home" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/api" element={<Api />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/users" element={<Users />} />
           </Routes>
-        
-        </BrowserRouter>
+        </CartProvider>
+      </BrowserRouter>
     </>
   )
 }
