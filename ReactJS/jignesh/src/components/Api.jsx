@@ -19,6 +19,7 @@ function Api() {
   // })}</div>;
 
   let [data, setData] = useState([]);
+  const [filterD , setFilter] = useState([])
 
   console.log(data);
 
@@ -29,16 +30,33 @@ function Api() {
     let api = await fetch("https://fakestoreapi.com/products");
     let apijson = await api.json();
     setData(apijson);
+    setFilter(apijson)
   }
 
   useEffect(() => {
     getData();
   }, []);
 
+  function FilterItems(type){
+    console.log("finc")
+    let filterData = data.filter((data)=>data.category == type) 
+    console.log(filterData)
+    setFilter(filterData)
+  }
+
+  function All(){
+    setFilter(data)
+  }
+
+
   return (
     <>
       <div className="main">
-        {data.map((item) => {
+        <button>All</button>
+        <button onClick={()=>{FilterItems("women's clothing")}}>Womens</button>
+        <button>Mens</button>
+        <button>Electronics</button>
+        {filterD.map((item) => {
           return (
             <>
               <div
