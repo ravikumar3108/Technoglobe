@@ -1,36 +1,26 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
+import axios, { all } from "axios";
 import toast, { Toaster } from "react-hot-toast";
 
 function Register() {
-  let [email, setEmail] = useState();
-  let [name, setName] = useState();
-  let [password, setPass] = useState();
+  let [allData, setData] = useState("");
 
-  // console.log(email, name, password);
+  console.log(allData);
 
-  // function getValue(e) {
-  //   setEmail(e.target.value);
-  // }
-
-  async function handleSubmit(e) {
-    e.preventDefault();
-    let res = await axios
-      .post("http://localhost:3030/register", {
-        email,
-        password,
-        name,
-      })
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-    // console.log(res);
+  function getValue(e) {
+    setData({
+      ...allData,
+      [e.target.name]: e.target.value,
+    });
   }
 
+  async function handleSubmit(e) {
+    e.preventDefault()
+    const {user , email , password} = allData
+    const newuser = await axios.post("http://localhost:8000/",{user , email , password})
+
+  }
   return (
     <div id="register">
       <Toaster />
@@ -45,7 +35,7 @@ function Register() {
                   </label>
                   <input
                     type="text"
-                    onChange={(e) => setName(e.target.value)}
+                    onChange={getValue}
                     className="form-control"
                     id="user"
                     aria-describedby="emailHelp"
@@ -58,8 +48,8 @@ function Register() {
                     Email
                   </label>
                   <input
+                    onChange={getValue}
                     type="email"
-                    onChange={(e) => setEmail(e.target.value)}
                     className="form-control"
                     id="email"
                     name="email"
@@ -70,8 +60,8 @@ function Register() {
                     Password
                   </label>
                   <input
+                    onChange={getValue}
                     type="password"
-                    onChange={(e) => setPass(e.target.value)}
                     className="form-control"
                     id="password"
                     name="password"

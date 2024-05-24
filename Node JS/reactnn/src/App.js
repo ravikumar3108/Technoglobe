@@ -7,13 +7,11 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        {/* <Register /> */}
         <Routes>
           <Route path="/login" element={<Login/>}/>
           <Route path="/" element={<Register/>}/>
           <Route path="/home" element={<Home/>}/>
         </Routes>
-        {/* <Login /> */}
       </BrowserRouter>
     </>
   )
