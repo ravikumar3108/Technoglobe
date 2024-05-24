@@ -2,6 +2,13 @@ const express = require('express')
 //  create a  object 
 const app = express()
 const bodyParser = require('body-parser')
+const cors = require('cors')
+
+var corsOptions = {
+  origin: 'http://localhost:3001',
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+}
+
 
 const mongoose = require('mongoose');
 
@@ -11,7 +18,7 @@ async function main() {
   await mongoose.connect('mongodb://127.0.0.1:27017/jeetu');
 }
 app.use(express.json())
-
+app.use(cors(corsOptions))
 // Create a Schema (Model)
 
 const userSchema = new mongoose.Schema({
@@ -23,16 +30,17 @@ const userSchema = new mongoose.Schema({
 const users = mongoose.model('jeetukusers', userSchema);
 
 app.post("", (req, res) => {
-  const { username, email, password } = req.body
-  const newuser = new users({
-    username,
-    email,
-    password,
-  })
-  newuser.save()
-  res.json({
-    user: req.body
-  })
+   console.log(req.body)
+  // const { username, email, password } = req.body
+  // const newuser = new users({
+  //   username,
+  //   email,
+  //   password,
+  // })
+  // newuser.save()
+  // res.json({
+  //   user: req.body
+  // })
 })
 
 
