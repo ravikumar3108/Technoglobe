@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { porducts } from "./Data";
 import { useCart } from "react-use-cart";
+import { Link } from "react-router-dom";
 
 function Api() {
   //  arrow function ()=>{}
@@ -75,6 +76,7 @@ function Api() {
                 <div key={item.id}>
                   <button onClick={() => addItem(item)}>Add to cart</button>
                 </div>
+                <button><Link to={`/more?id=/${item.id}`}>More details</Link></button>
               </div>
             </>
           );

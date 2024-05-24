@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import Api from "./components/Api";
 import { CartProvider } from "react-use-cart";
 import Cart from "./components/Cart";
+import More from "./components/More";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="" element={<Home />} />
             <Route path="/api" element={<Api />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/more" element={<More />} />
           </Routes>
         </CartProvider>
       </BrowserRouter>
