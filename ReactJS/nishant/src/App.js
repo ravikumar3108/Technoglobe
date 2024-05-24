@@ -8,6 +8,7 @@ import Home from "./components/Home"
 import Navbar from "./components/Navbar"
 import About from "./components/About"
 import Conatct from "./components/Conatct"
+import "./App.css"
 
 
 function App() {
@@ -24,7 +25,6 @@ function App() {
         </Routes>
       </BrowserRouter>
     </>
-
   )
 }
 
