@@ -77,6 +77,7 @@ function Api() {
                   <button onClick={() => addItem(item)}>Add to cart</button>
                 </div>
                 <button><Link to={`/more?id=/${item.id}`}>More details</Link></button>
+                {/* <button><Link to={`/more/${item.id}`}>More details</Link></button> */}
               </div>
             </>
           );

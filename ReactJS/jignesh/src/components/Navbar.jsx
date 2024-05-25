@@ -21,6 +21,9 @@ function Navbar() {
         <li>
             <Link to="/cart">CArt</Link>
         </li>
+        <li>
+            <Link to="/slider">Slider</Link>
+        </li>
       </ul>
      
     </div>

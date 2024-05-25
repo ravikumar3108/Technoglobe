@@ -7,6 +7,8 @@ import Api from "./components/Api";
 import { CartProvider } from "react-use-cart";
 import Cart from "./components/Cart";
 import More from "./components/More";
+import Slider from "./components/Slider";
+import "./App.css"
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
             <Route path="/api" element={<Api />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/more" element={<More />} />
+            <Route path="/slider" element={<Slider />} />
+            {/* <Route path="/more/:id" element={<More />} /> */}
           </Routes>
         </CartProvider>
       </BrowserRouter>
