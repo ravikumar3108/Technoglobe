@@ -12,6 +12,7 @@ function Navbar() {
         <li><Link to="/api">Api</Link></li>
         <li><Link to="/login">Login</Link></li>
         <li><Link to="/signup">Sigup</Link></li>
+        <li><Link to="/slider">slider</Link></li>
       </ul>
     </div>
   )

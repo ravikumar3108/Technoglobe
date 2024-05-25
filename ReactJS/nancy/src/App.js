@@ -10,6 +10,8 @@ import Login from "./components/Login";
 import Users from "./components/Users";
 import { CartProvider } from "react-use-cart";
 import Api from "./components/Api";
+import More from "./components/More";
+import Slider from "./components/slider";
 
 //  Create a function componenets
 // export 
@@ -35,6 +37,8 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/users" element={<Users />} />
+            <Route path="/moredetails" element={<More />} />
+            <Route path="/slider" element={<Slider />} />
           </Routes>
         </CartProvider>
       </BrowserRouter>
