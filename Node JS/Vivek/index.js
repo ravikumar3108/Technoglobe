@@ -5,7 +5,7 @@ const bodyParser = require('body-parser')
 const cors = require('cors')
 
 var corsOptions = {
-  origin: 'http://localhost:3001',
+  origin: 'http://localhost:3000',
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 }
 
@@ -30,17 +30,28 @@ const userSchema = new mongoose.Schema({
 const users = mongoose.model('jeetukusers', userSchema);
 
 app.post("", (req, res) => {
-   console.log(req.body)
-  // const { username, email, password } = req.body
-  // const newuser = new users({
-  //   username,
-  //   email,
-  //   password,
-  // })
-  // newuser.save()
-  // res.json({
-  //   user: req.body
-  // })
+  console.log(req.body)
+  const { user, email, password } = req.body
+  const newuser = new users({
+    user,
+    email,
+    password,
+  })
+  newuser.save()
+  res.json({
+    status: true,
+    user: newuser,
+    message: "user created"
+  })
+})
+
+app.post("/login", async (req, res) => {
+  console.log(req.body)
+  const { email, password } = req.body
+  const user = await users.findOne({ email })
+  res.json({
+    loginuser: user
+  })
 })
 
 
