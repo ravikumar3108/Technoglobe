@@ -18,8 +18,11 @@ function Register() {
   async function handleSubmit(e) {
     e.preventDefault()
     const {user , email , password} = allData
-    const newuser = await axios.post("http://localhost:8000/",{user , email , password})
-
+    const newuser = await axios.post("http://localhost:8000/",{user , email , password}).then((res)=>{
+      console.log(res)
+      console.log(res.data)
+      
+    })
   }
   return (
     <div id="register">

@@ -9,19 +9,13 @@ const Login = () => {
   let [password, setPass] = useState();
   const nav = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    axios
-      .post("http://localhost:3030/login", { email, password })
+    await axios
+      .post("http://localhost:8000/login", { email, password })
       .then((result) => {
         console.log(result);
-        console.log(result.data.message);
-
-        if (result.data.message == "Succesfull") {
-          nav("/home")
-        } else {
-          alert("unsuccesfull");
-        }
+        // console.log(result.data.message);
       })
       .catch((err) => {
         console.log(err);
