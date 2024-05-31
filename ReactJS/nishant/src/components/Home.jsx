@@ -1,5 +1,6 @@
 import React from "react";
 import img1 from "./Images/djj3.jpg"
+import Hooks from "./Hooks";
 
 function Home() {
 
@@ -19,7 +20,8 @@ function Home() {
         perspiciatis nostrum est maxime?
       </p>
 
-      <img src={img1} alt="" width="100%" />
+      {/* <img src={img1} alt="" width="100%" /> */}
+      <Hooks/>
 
     </>
   );
