@@ -18,15 +18,36 @@ function Signup() {
 
   function getData1(e) {
     setAllData({
-      // Spread operator 
+      // Spread operator
       ...allData,
       [e.target.name]: e.target.value,
     });
   }
 
+  // function handleSubmit(e) {
+  //   e.preventDefault();
+  //   console.log("Submit");
+  //   localStorage.setItem("nishant", JSON.stringify(allData));
+  // }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log("Submit");
+    const user = JSON.parse(localStorage.getItem("nishant"));
+    console.log(user);
+    if (
+      allData.username === user.username &&
+      allData.password == user.password
+    ) {
+      console.log("login");
+    } else {
+      alert("Something wrong");
+    }
+  }
+
   return (
     <div>
-      <form action="">
+      <form action="" onSubmit={handleSubmit}>
         <h1>Signup</h1>
         <label htmlFor="">UserName</label>
         <input type="text" name="username" id="" onChange={getData1} />
