@@ -54,6 +54,19 @@ app.post("/login", async (req, res) => {
   })
 })
 
+app.get("/getusers/:id", async (req, res) => {
+  console.log(req.params)
+  // const alluser = await users.find({})
+  // console.log(alluser)
+  // res.json({
+  //   status: true,
+  //   alluser1: alluser
+  // })
+
+})
+
+
+
 
 // parse application/x-www-form-urlencoded
 // app.use(bodyParser.urlencoded({ extended: false }))
