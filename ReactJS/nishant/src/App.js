@@ -9,6 +9,7 @@ import Navbar from "./components/Navbar"
 import About from "./components/About"
 import Conatct from "./components/Conatct"
 import "./App.css"
+import Cont from "./components/Cont"
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/contact" element={<Conatct />} />
           <Route path="/" element={<About />} />
+          <Route path="/cont" element={<Cont />} />
         </Routes>
       </BrowserRouter>
     </>
