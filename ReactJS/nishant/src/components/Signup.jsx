@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Signup() {
   //  Single State Data
@@ -15,6 +16,8 @@ function Signup() {
 
   const [allData, setAllData] = useState("");
   console.log(allData);
+
+  let nav = useNavigate()
 
   function getData1(e) {
     setAllData({
@@ -39,7 +42,7 @@ function Signup() {
       allData.username === user.username &&
       allData.password == user.password
     ) {
-      console.log("login");
+     nav("/home")
     } else {
       alert("Something wrong");
     }
