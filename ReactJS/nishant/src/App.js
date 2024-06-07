@@ -10,6 +10,7 @@ import About from "./components/About"
 import Conatct from "./components/Conatct"
 import "./App.css"
 import Cont from "./components/Cont"
+import Api from "./components/Api"
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path="/contact" element={<Conatct />} />
           <Route path="/" element={<About />} />
           <Route path="/cont" element={<Cont />} />
+          <Route path="/api" element={<Api />} />
         </Routes>
       </BrowserRouter>
     </>
