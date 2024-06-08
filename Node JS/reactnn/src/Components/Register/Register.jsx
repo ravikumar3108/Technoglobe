@@ -16,13 +16,10 @@ function Register() {
   }
 
   async function handleSubmit(e) {
-    e.preventDefault()
-    const {user , email , password} = allData
-    const newuser = await axios.post("http://localhost:8000/",{user , email , password}).then((res)=>{
-      console.log(res)
-      console.log(res.data)
-      
-    })
+    e.preventDefault();
+    axios.post("http://localhost:8000/signup", allData).then((res) => {
+      console.log(res);
+    });
   }
   return (
     <div id="register">

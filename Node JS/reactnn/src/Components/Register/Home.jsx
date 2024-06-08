@@ -3,15 +3,7 @@ import axios from "axios";
 
 function Home() {
   const handleSubmit = async (e) => {
-    await axios
-      .get("http://localhost:8000/getusers")
-      .then((result) => {
-        console.log(result);
-        console.log(result.data.alluser1)
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+   
   };
 
   useEffect(() => {
