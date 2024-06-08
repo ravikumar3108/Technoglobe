@@ -2,12 +2,17 @@ const express = require("express")
 // create a object 
 const app = express()
 const mongoose = require('mongoose')
+const cors = require('cors')
+
+const corsOptions = {
+    origin: 'http://localhost:3000',
+    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+}
 //  create a APIs
 
 // middlewares
 app.use(express.json())
-
-
+app.use(cors(corsOptions))
 
 main().catch(err => console.log(err));
 
@@ -25,12 +30,6 @@ const userSchema = new mongoose.Schema({
 
 const User = mongoose.model('users', userSchema);
 
-
-
-
-
-
-
 // get , post , delete , put 
 app.get("", (req, res) => {
     // res.send("helkoo")
@@ -41,21 +40,33 @@ app.get("", (req, res) => {
     // res.status(400).json({ mesage: "sucessfull", })
 })
 
-app.post("", async (req, res) => {
-
-    const { name, email, password } = req.body
-    const user = await User({
-        name: name,
+app.post("/signup", async (req, res) => {
+    console.log(req.body)
+    const { user, email, password } = req.body
+    const newuser = await User({
+        name: user,
         email: email,
         password: password
     })
-    await user.save()
+    await newuser.save()
     res.json({
-        mesage: user,
+        mesage: newuser,
         status: true
     })
 })
 
+// delete 
+app.post("/delete/:id", async (req, res) => {
+    console.log(req.params.id)
+    const idd = req.params.id
+    const deluser = await User.deleteOne({ _id: idd }).then((res) => {
+        console.log(res)
+    })
+    res.json({
+        mesage: "user deleted",
+        deluser1: deluser,
+    })
+})
 
 //  create a route 
 app.listen(8000, () => {
