@@ -7,18 +7,16 @@ import toast, { Toaster } from "react-hot-toast";
 const Login = () => {
   let [email, setData] = useState();
   let [password, setPass] = useState();
+
   const nav = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios
+    axios
       .post("http://localhost:8000/login", { email, password })
-      .then((result) => {
-        console.log(result);
-        // console.log(result.data.message);
-      })
-      .catch((err) => {
-        console.log(err);
+      .then((res) => {
+        console.log(res.data.login);
+        console.log(res);
       });
   };
 

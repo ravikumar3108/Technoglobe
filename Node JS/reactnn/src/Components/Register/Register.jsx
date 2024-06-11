@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import axios, { all } from "axios";
+import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 
 function Register() {
   let [allData, setData] = useState("");
-
   console.log(allData);
 
   function getValue(e) {
