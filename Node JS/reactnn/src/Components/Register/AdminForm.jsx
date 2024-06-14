@@ -1,12 +1,11 @@
+import { all } from "axios";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import toast, { Toaster } from "react-hot-toast";
 
-function Register() {
-  let [allData, setData] = useState("");
+function AdminForm() {
+  const [allData, setData] = useState();
   console.log(allData);
-
   function getValue(e) {
     setData({
       ...allData,
@@ -16,60 +15,70 @@ function Register() {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    axios.post("http://localhost:8000/users/signup", allData).then((res) => {
-      console.log(res);
-    });
+    await axios
+      .post("http://localhost:8000/product/createproducts", allData)
+      .then((res) => {
+        console.log(res);
+      });
   }
+
   return (
-    <div id="register">
-      <Toaster />
+    <div>
       <div class="row">
         <div class="col-md-4 offset-md-3 m-auto">
           <div class="card">
             <div class="card-body">
               <form onSubmit={handleSubmit}>
                 <div className="mb-3">
-                  <label htmlFor="user" className="form-label">
-                    User Name
+                  <label htmlFor="email" className="form-label">
+                    Title
                   </label>
                   <input
-                    type="text"
                     onChange={getValue}
+                    type="text"
                     className="form-control"
-                    id="user"
                     aria-describedby="emailHelp"
-                    name="user"
+                    name="title"
                   />
                   {/* <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div> */}
                 </div>
                 <div className="mb-3">
-                  <label htmlFor="email" className="form-label">
-                    Email
+                  <label htmlFor="password" className="form-label">
+                    DesCription
                   </label>
                   <input
                     onChange={getValue}
-                    type="email"
+                    type="text"
                     className="form-control"
-                    id="email"
-                    name="email"
+                    name="des"
                   />
                 </div>
                 <div className="mb-3">
                   <label htmlFor="password" className="form-label">
-                    Password
+                    Rating
                   </label>
                   <input
                     onChange={getValue}
-                    type="password"
+                    type="text"
                     className="form-control"
-                    id="password"
-                    name="password"
+                    name="rating"
                   />
                 </div>
-                <button type="submit" className="btn btn-primary me-3">
-                  Register
+                <div className="mb-3">
+                  <label htmlFor="password" className="form-label">
+                    Price
+                  </label>
+                  <input
+                    onChange={getValue}
+                    type="text"
+                    className="form-control"
+                    name="price"
+                  />
+                </div>
+                <button type="submit" className="btn btn-success me-3">
+                  Login
                 </button>
-                <Link to="/login">Login</Link>
+                <Link to="/register">Create Your Account </Link>
               </form>
             </div>
           </div>
@@ -79,4 +88,4 @@ function Register() {
   );
 }
 
-export default Register;
+export default AdminForm;

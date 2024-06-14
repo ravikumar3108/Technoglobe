@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 function Navbar() {
   return (
     <div>
-      <nav class="navbar navbar-expand-lg bg-black">
+      <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
           <h3>
             <Link class="nav-link" href="#">
-              Mobile
+              Shopping
             </Link>
           </h3>
           <button
@@ -30,8 +30,13 @@ function Navbar() {
                 </Link>
               </li>
               <li class="nav-item">
-                <Link class="nav-link" href="#">
-                    About
+                <Link to={"/admin"}>
+                    Admin
+                </Link>
+              </li>
+              <li class="nav-item">
+                <Link to={"/product"}>
+                product
                 </Link>
               </li>
               <li class="nav-item">
@@ -40,17 +45,6 @@ function Navbar() {
                 </Link>
               </li>
             </ul>
-            <form class="d-flex" role="search">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button class="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form>
           </div>
         </div>
       </nav>

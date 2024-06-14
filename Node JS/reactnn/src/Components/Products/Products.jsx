@@ -36,26 +36,7 @@ function Product() {
         })
       } */}
 
-      {/* {Data.products.map((item)=>{
-        return(
-          <>
-          <div className="container">
-          <div className="row col-12">
-            <div className="col-3">
-              <div className="card">
-                <div className="card-body">
-                    {item.title}
-                    {item.images}
-                    {item.brand}
-                    {item.price}
-                </div>
-              </div>
-            </div>
-          </div>
-          </div>
-          </>
-        )
-      })} */}
+    
     </div>
   )
 }

@@ -12,12 +12,18 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    axios
-      .post("http://localhost:8000/login", { email, password })
-      .then((res) => {
-        console.log(res.data.login);
-        console.log(res);
-      });
+    try {
+      axios
+        .post("http://localhost:8000/users/login", { email, password })
+        .then((res) => {
+          console.log(res.data.login);
+          console.log(res);
+        }).catch((err)=>{
+          console.log(err)
+        });
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
