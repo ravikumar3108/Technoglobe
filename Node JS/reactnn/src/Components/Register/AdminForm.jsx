@@ -5,6 +5,8 @@ import axios from "axios";
 
 function AdminForm() {
   const [allData, setData] = useState();
+  const [image, setImage] = useState();
+  console.log(image);
   console.log(allData);
   function getValue(e) {
     setData({
@@ -15,8 +17,14 @@ function AdminForm() {
 
   async function handleSubmit(e) {
     e.preventDefault();
+    console.log("imageinform", image);
     await axios
-      .post("http://localhost:8000/product/createproducts", allData)
+      .post("http://localhost:8000/product/createproducts", {
+        headers: {
+          "Accept": "*/*",
+        },
+        image,
+      })
       .then((res) => {
         console.log(res);
       });
@@ -28,7 +36,15 @@ function AdminForm() {
         <div class="col-md-4 offset-md-3 m-auto">
           <div class="card">
             <div class="card-body">
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={handleSubmit} enctype="multipart/form-data">
+                <input
+                  type="file"
+                  name="image"
+                  id=""
+                  onChange={(e) => {
+                    setImage(e.target.files[0]);
+                  }}
+                />
                 <div className="mb-3">
                   <label htmlFor="email" className="form-label">
                     Title

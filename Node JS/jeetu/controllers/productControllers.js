@@ -2,19 +2,20 @@ const Product = require("../models/porductModel")
 
 
 const createProducts = async (req, res) => {
+    console.log(req.body)
+    console.log(req.file)
 
-
-    const product = await Product({
-        title: req.body.title,
-        des: req.body.des,
-        rating: req.body.rating,
-        price: req.body.price
-    })
-    await product.save()
-    res.json({
-        mesage: product,
-        status: true
-    })
+    // const product = await Product({
+    //     title: req.body.title,
+    //     des: req.body.des,
+    //     rating: req.body.rating,
+    //     price: req.body.price
+    // })
+    // await product.save()
+    // res.json({
+    //     mesage: product,
+    //     status: true
+    // })
 
 }
 

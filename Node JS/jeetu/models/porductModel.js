@@ -5,6 +5,10 @@ const productSchema = new mongoose.Schema({
     des: String,
     rating: String,
     price: String,
+    image: {
+        data: Buffer,
+        contentType: String
+    },
 });
 
 
