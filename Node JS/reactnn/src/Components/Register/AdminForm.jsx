@@ -17,14 +17,10 @@ function AdminForm() {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    console.log("imageinform", image);
-    await axios
-      .post("http://localhost:8000/product/createproducts", {
-        headers: {
-          "Accept": "*/*",
-        },
-        image,
-      })
+    const fdata = new FormData();
+    fdata.append("image", image);
+    axios
+      .post("http://localhost:8000/product/createproducts", fdata)
       .then((res) => {
         console.log(res);
       });
