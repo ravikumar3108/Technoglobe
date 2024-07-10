@@ -11,6 +11,8 @@ import Conatct from "./components/Conatct"
 import "./App.css"
 import Cont from "./components/Cont"
 import Api from "./components/Api"
+import { CartProvider } from "react-use-cart"
+import Cart from "./components/Cart"
 
 
 function App() {
@@ -18,15 +20,18 @@ function App() {
     //  JSX fragemnts ;- 
     <>
       <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<About />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/contact" element={<Conatct />} />
-          <Route path="/" element={<About />} />
-          <Route path="/cont" element={<Cont />} />
-          <Route path="/api" element={<Api />} />
-        </Routes>
+        <CartProvider>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<About />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/contact" element={<Conatct />} />
+            <Route path="/" element={<About />} />
+            <Route path="/cont" element={<Cont />} />
+            <Route path="/api" element={<Api />} />
+            <Route path="/cart" element={<Cart />} />
+          </Routes>
+        </CartProvider>
       </BrowserRouter>
     </>
   )
